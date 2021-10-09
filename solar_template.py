@@ -5,8 +5,8 @@ from body_template import Body
 from system_template import System
 '''import all of codinglib, the System class from system program, and the Body class from your body program (3 lines)
 the window width and height should both be 600, but you just need to specify something                   (2 lines)'''
-WINDOW_WIDTH = 600
-WINDOW_HEIGHT = 600
+WINDOW_WIDTH = 1000
+WINDOW_HEIGHT = 1000
 AU = 1.49598e11 #number of meters per astronomical unit
 EM = 5.9736e24  #mass of the Earth in kilograms
 
