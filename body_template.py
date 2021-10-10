@@ -46,7 +46,7 @@ class Body:
         set_fill_color(self.r, self.g, self.b)
         disable_stroke()
         enable_fill()
-        draw_circle(pixels_per_meter * self.x + cx, pixels_per_meter * self.y + cy, self.pixel_radius)
+        draw_circle(pixels_per_meter * self.x+cx, pixels_per_meter * self.y +cy, self.pixel_radius)
         '''set the appropriate fill color, disable stroke, enable fill, and draw a circle
 
         circle's center should be the (pixels per meter * the unspecified x) away from the center x value

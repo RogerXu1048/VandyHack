@@ -9,6 +9,12 @@ class System:
         self.body_list = body_list
         '''store the body list to the unspecified body list'''
 
+    def add(self, body):
+        self.body_list.append(body)
+
+    def delete(self, body):
+        self.body_list.remove(body)
+
     def draw(self, cx, cy, pixels_per_meter): #draws System by drawing each body in body list (1 extra line)
         for body in self.body_list:
             body.draw(cx, cy, pixels_per_meter)

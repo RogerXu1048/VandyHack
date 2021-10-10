@@ -24,6 +24,26 @@ app = QApplication(sys.argv)
 def noop(*args, **kwargs):
     pass
 
+# Button Class
+class Button:
+    def __init__(self, leftx, topy, width, height,pressed):
+        self.x = leftx
+        self.y = topy
+        self.w = width
+        self.h = height
+        self.pressed = pressed
+
+    def is_clicked(self):
+        if is_mouse_pressed() and self.x < mouse_x() < (
+                self.x + self.w) and self.y < mouse_y() < (self.y + self.h) and not self.pressed:
+            self.pressed = True
+            return True
+        else:
+            self.pressed = False
+            return False
+
+    def draw_rec_button(self):
+        draw_rectangle(self.x, self.y, self.w, self.h)
 #generic state class used to create objects to pass between callbacks in coding examples
 class State():
     def __init__(self):
@@ -534,9 +554,10 @@ def get_text_height():
 #main graphics loop
 #the frames parameters gives the number of frames to display on the browser version of coding library, not in qt version
 def start_graphics(draw_func=noop, frames=1, data=None, framerate=40,
-                title="CODING w Mr. Joaquin", width=400, height=400,
+                title="Solar System", width=400, height=400,
                 mouse_press=noop, mouse_release = noop, mouse_move=noop,
                 key_press=noop, key_release=noop):
+
 
     global canvas
 
